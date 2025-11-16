@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Night Planner – Support & Privacy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Support and Privacy Policy for the Movie Night Planner app – design the perfect movie night your way."
+  />
+  <style>
+    :root {
+      --bg: #071b36;
+      --bg-alt: #0b2344;
+      --card: #10233f;
+      --card-soft: #132a4b;
+      --accent: #ffc857;
+      --accent-soft: rgba(255, 200, 87, 0.12);
+      --text: #f5f7ff;
+      --muted: #9fb3d9;
+      --border: #1f355a;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #132a4b 0, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(159, 179, 217, 0.25);
+      color: var(--muted);
+      background: rgba(7, 27, 54, 0.7);
+    }
+
+    .nav-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #132a4b 0%, #0b2344 45%, #10233f 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255, 200, 87, 0.19), transparent);
+      top: -120px;
+      right: -120px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 540px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(3, 13, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-tagline {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: var(--accent);
+      color: #1b2236;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(159, 179, 217, 0.35);
+      background: rgba(7, 27, 54, 0.7);
+      color: var(--muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .section {
+      background: radial-gradient(circle at top left, #182b4a 0, var(--card) 50%);
+      border-radius: 24px;
+      padding: 20px 18px 18px;
+      border: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title-badge {
+      font-size: 0.7rem;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(255, 200, 87, 0.6);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .section-body {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .small-card {
+      background: var(--card-soft);
+      border-radius: var(--radius-lg);
+      padding: 12px 12px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .small-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .small-card-text {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      margin-top: 10px;
+      padding: 12px 12px 11px;
+      border-radius: var(--radius-lg);
+      background: var(--accent-soft);
+      border: 1px solid rgba(255, 200, 87, 0.4);
+      font-size: 0.86rem;
+      color: #fdfaf2;
+    }
+
+    .contact-box strong {
+      font-weight: 600;
+    }
+
+    .contact-box ul {
+      margin: 6px 0 0 16px;
+      padding-left: 0;
+    }
+
+    .contact-box li {
+      margin-bottom: 3px;
+    }
+
+    .policy-list {
+      list-style: none;
+      margin-top: 6px;
+    }
+
+    .policy-list li {
+      margin-bottom: 6px;
+    }
+
+    .policy-heading {
+      font-weight: 600;
+      margin: 12px 0 4px;
+      font-size: 0.92rem;
+    }
+
+    .policy-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      padding-bottom: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 18px 14px 16px;
+        border-radius: 20px;
+      }
+
+      .hero-title {
+        font-size: 1.45rem;
+      }
+
+      .section {
+        padding: 16px 14px 14px;
+        border-radius: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-title">Movie Night Planner</div>
+        <div class="brand-subtitle">
+          Design the perfect movie night your way.
+        </div>
+      </div>
+      <nav>
+        <a href="#support" class="nav-link">Support</a>
+        <a href="#privacy" class="nav-link">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>App Support &amp; Privacy</span>
+        </div>
+        <h1 class="hero-title">Need help with your movie night?</h1>
+        <p class="hero-tagline">
+          Find quick answers, contact our team, and learn how we protect your
+          data while AI creates the perfect movie night combo for you.
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:vinhvancao2009@icloud.com">
+            <button class="btn-primary">Contact Support</button>
+          </a>
+          <a href="#privacy">
+            <button class="btn-ghost">View Privacy Policy</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- SUPPORT -->
+      <section id="support" class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">
+              Support
+              <span class="section-title-badge">Help Center</span>
+            </h2>
+            <p class="section-subtitle">
+              If Movie Night Planner isn’t working as expected or you have any
+              questions, we’re here to help.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="card-grid">
+            <div class="small-card">
+              <div class="small-card-title">Getting started</div>
+              <p class="small-card-text">
+                Pick a movie or show, choose your mood, group size, budget and
+                more. Our AI will build a full “movie night combo” including
+                vibe, setup, food and activities.
+              </p>
+            </div>
+
+            <div class="small-card">
+              <div class="small-card-title">Common issues</div>
+              <p class="small-card-text">
+                If a plan doesn’t load, please check your internet connection,
+                update the app to the latest version, then try generating the
+                night again.
+              </p>
+            </div>
+
+            <div class="small-card">
+              <div class="small-card-title">Feature requests</div>
+              <p class="small-card-text">
+                Have ideas for new options, themes or integrations? Send them to
+                us – we love improving the app with your feedback.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <strong>Contact us</strong><br />
+            For support, feedback or bug reports, please email us at
+            <a href="mailto:vinhvancao2009@icloud.com">
+              vinhvancao2009@icloud.com
+            </a>.
+            <br /><br />
+            To help us assist you faster, include:
+            <ul>
+              <li>Your device model (e.g. iPhone 15 Pro)</li>
+              <li>Your OS version (e.g. iOS 18.x)</li>
+              <li>The app version (from the app settings screen)</li>
+              <li>A short description of the issue and steps to reproduce it</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVACY POLICY -->
+      <section id="privacy" class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">
+              Privacy Policy
+              <span class="section-title-badge">Your Data</span>
+            </h2>
+            <p class="section-subtitle">
+              We respect your privacy. This page explains what data we collect,
+              how it’s used, and the choices you have.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <p class="policy-meta">
+            Last updated: 11 November 2025  
+            This Privacy Policy applies to the Movie Night Planner mobile
+            application (“the App”, “we”, “us”).
+          </p>
+
+          <p class="policy-heading">1. Information we collect</p>
+          <ul class="policy-list">
+            <li>
+              <strong>Information you provide</strong> – For example, when you
+              contact us by email or send feedback from within the App, we may
+              receive your email address and any information you choose to
+              include in your message.
+            </li>
+            <li>
+              <strong>Movie night preferences</strong> – When you create a
+              “movie night combo” we process your selections (movie/show,
+              genres, mood, group size, budget, time, etc.) so that our AI can
+              generate a personalized plan for you. These preferences are used
+              only to provide and improve the service.
+            </li>
+            <li>
+              <strong>Automatically collected data</strong> – The App may
+              collect basic technical information such as device model, OS
+              version, app version, and anonymous usage events (for example,
+              which screens are opened) to help us understand performance and
+              improve the experience.
+            </li>
+            <li>
+              <strong>Third-party services</strong> – The App may use
+              third-party tools (such as analytics, crash reporting or movie
+              information APIs) which can receive certain technical data as part
+              of providing their services.
+            </li>
+          </ul>
+
+          <p class="policy-heading">2. How we use your information</p>
+          <ul class="policy-list">
+            <li>To generate and display AI-created movie night plans to you.</li>
+            <li>To operate, maintain and improve the App’s features.</li>
+            <li>To respond to your questions, requests and support emails.</li>
+            <li>
+              To monitor usage, fix bugs and improve reliability and
+              performance.
+            </li>
+          </ul>
+
+          <p class="policy-heading">3. Data storage &amp; security</p>
+          <ul class="policy-list">
+            <li>
+              We strive to protect your data and use reasonable technical and
+              organizational measures to secure it.
+            </li>
+            <li>
+              We do not sell your personal data to third parties.
+            </li>
+            <li>
+              Where possible, data used for analytics and crash reports is
+              aggregated or anonymized.
+            </li>
+          </ul>
+
+          <p class="policy-heading">4. Third-party services</p>
+          <p class="section-subtitle" style="margin-bottom:6px;">
+            The App may integrate with third-party SDKs or APIs. These services
+            have their own privacy policies, which we encourage you to review.
+          </p>
+          <ul class="policy-list">
+            <li>
+              <strong>Analytics / crash reporting</strong> – Used to understand
+              how the App is used and to diagnose technical issues.
+            </li>
+            <li>
+              <strong>Movie / TV information APIs</strong> – Used to retrieve
+              details such as titles, posters or descriptions to help you
+              discover movies and shows for your night.
+            </li>
+            <li>
+              <strong>Advertising (if enabled)</strong> – If the App shows ads,
+              some partners may use device identifiers to show more relevant
+              ads, in accordance with platform rules and your consent settings.
+            </li>
+          </ul>
+
+          <p class="policy-heading">5. Children’s privacy</p>
+          <ul class="policy-list">
+            <li>
+              Movie Night Planner is intended for general audiences but is not
+              designed to collect personal information from children under the
+              age required by local laws without parental consent.
+            </li>
+            <li>
+              If you believe we have unintentionally collected personal data
+              from a child, please contact us and we will delete it.
+            </li>
+          </ul>
+
+          <p class="policy-heading">6. Contact us</p>
+          <p>
+            If you have any questions about this Privacy Policy or about Movie
+            Night Planner, please contact us at:
+            <br />
+            <strong>Email:</strong>
+            <a href="mailto:vinhvancao2009@icloud.com">
+              vinhvancao2009@icloud.com
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Movie Night Planner. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
+</body>
+</html>
